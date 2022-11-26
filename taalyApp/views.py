@@ -10,3 +10,6 @@ def index(request):
 def catalogo(request):
     return render(request, 'taalyApp/catalogo.html')
 
+def registrarPlantas(request):
+    return render(request, 'taalyApp/registrarPlantas.html')
+

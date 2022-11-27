@@ -2,41 +2,16 @@
     
 {% block content %}
 <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="card border border-success">
-        <img src="/static/images/plantsImages/herbgreen.jpg" class="card-img-top rounded" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  {% for item in cards %}
+  
+      <div class="col">
+        <div class="card border border-success">
+          <div class="card-body">
+            <h5 class="card-title">{{ item.nombre }}</h5>
+            <p class="card-text">{{ item.descripcion }}</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card border border-success">
-        <img src="/static/images/plantsImages/herbalTea.jpg" class="card-img-top rounded" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card border border-success">
-        <img src="/static/images/plantsImages/lavanders.jpg" class="card-img-top rounded" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card border border-success">
-        <img src="/static/images/plantsImages/motherwort.jpg" class="card-img-top rounded" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% endfor %}
+</div>
 {% endblock %}

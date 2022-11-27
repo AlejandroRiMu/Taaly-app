@@ -9,7 +9,8 @@ def index(request):
     return render(request, 'taalyApp/index.html')
 
 def catalogo(request):
-    return render(request, 'taalyApp/catalogo.html')
+    cardGeneradas = Planta.objects.all()
+    return render(request, 'taalyApp/catalogo.html', {'cards': cardGeneradas})
 
 def listarPlantas(request):
     plantasListadas = Planta.objects.all()

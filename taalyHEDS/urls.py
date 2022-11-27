@@ -25,7 +25,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('catalogo/plantas', views.catalogo, name='catalogo'),
-    path('catalogo/regitrar', views.registrarPlantas, name='registrarPlantas'),
+    path('catalogo/listar', views.listarPlantas, name='listarPlantas'),
+    path('catalogo/eliminarPlanta/<int:id>', views.eliminarPlanta, name='eliminarPlanta'),
+    path('catalogo/formRegistrarPlanta/', views.formRegistrarPlantas, name='formRegistrarPlantas'),
+    path('registrarPlanta/', views.registrarPlanta, name='registrarPlanta'),
 ]
 
 

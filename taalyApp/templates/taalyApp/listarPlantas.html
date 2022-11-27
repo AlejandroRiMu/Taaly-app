@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="page-heading">
+    <div class="page-title">
+        <div class="row">
+            <div class="col-12 col-md-6 order-md-1 order-last">
+                <h3>Listado | Plantas</h3>
+                <p class="text-subtitle text-muted">Datos registrados</p>
+            </div>
+        </div>
+    </div>
+    <section class="section">
+        <div class="card">
+            <div class="card-header position-relative">
+                <h5>Plantas</h5>
+                <a href="{% url 'formRegistrarPlantas' %}" class="btn btn-primary position-absolute top-50 end-0">Agregar registro <i class="fa-solid fa-spa"></i></a>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped mt-3" id="table1">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Region</th>
+                            <th>Efectos</th>
+                            <th>Usos</th>
+                            <th>Descripcion</th>
+                            <th colspan="2">Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in plantas %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ item.nombre }}</td>
+                            <td>{{ item.region }}</td>
+                            <td>{{ item.efectos }}</td>
+                            <td>{{ item.usos }}</td>
+                            <td>{{ item.descripcion }}</td>
+                            <td>
+                                <a href="editarPlanta/{{item.id}}" class="btn btn-block btn-outline-primary">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a></td>
+                            <td>
+                                <a href="eliminarPlanta/{{item.id}}" class="btn btn-outline-danger">
+                                    <i class="fa-solid fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+  
+    </section>
+  </div>
+{% endblock %}

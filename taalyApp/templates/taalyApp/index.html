@@ -1,39 +1,49 @@
 {% extends 'base.html' %}
 
+
 {% block content %}
     <div class="container">
-        <div class="row"><div class="col-xl-4 col-md-6 col-sm-12">
-            <div class="card">
-                <div class="card-content">
+        <div class="row">
+            <div class="col-xl-12 col-md-6 col-sm-12"></div>
+            <div class="card card-body">
+                <h2 class="page-title text-center">Bienvenid@</h2>
+            </div>
+        </div>
+    </div>
+    <section class="section">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Populares</h4>
-                        <h6 class="card-subtitle">Support card subtitle</h6>
-                    </div>
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="/static/images/plantsImages/herbgreen.jpg" class="d-block w-100"
-                                    alt="Image Architecture">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="/static/images/plantsImages/lavanders.jpg" class="d-block w-100"
-                                    alt="Image Mountain">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="/static/images/plantsImages/motherwort.jpg" class="d-block w-100"
-                                    alt="Image Jump">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt assumenda
-                            mollitia
-                            officia dolorum eius quasi.Chocolate sesame snaps apple pie danish cupcake
-                            sweet roll
-                            jujubes tiramisu.
-                        </p>
+                        <div id="area"></div>
                     </div>
                 </div>
             </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div id="radialGradient"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div id="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div id="bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 {% endblock %}

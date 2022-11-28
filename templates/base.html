@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
 
     <link rel="stylesheet" href="{% static 'vendors/iconly/bold.css'%}">
+    <link rel="stylesheet" href="{% static 'vendors/apexcharts/apexcharts.css'%}">
 
     <link rel="stylesheet" href="{% static 'vendors/perfect-scrollbar/perfect-scrollbar.css'%}">
     <link rel="stylesheet" href="{% static 'vendors/bootstrap-icons/bootstrap-icons.css'%}">
@@ -25,6 +26,14 @@
     <link rel="stylesheet" href="{% static 'css/pages/auth.css'%}">
     <link rel="shortcut icon" href="{% static './images/favicon.svg'%}" type="image/x-icon">
     {% endblock %}
+
+    <style>
+        body {
+            background: rgb(194,211,255);
+            background: radial-gradient(circle, rgba(194,211,255,1) 0%, rgba(211,219,255,1) 33%, rgba(255,255,255,1) 100%);
+        }
+    </style>
+
 </head>
 
 <body>
@@ -101,9 +110,12 @@
     <script src="{% static 'js/bootstrap.bundle.min.js '%}"></script>
 
     <script src="{% static 'vendors/apexcharts/apexcharts.js '%}"></script>
+    <script src="{% static 'js/pages/ui-apexchart.js'%}"></script>
     <script src="{% static 'js/pages/dashboard.js '%}"></script>
 
     <script src="{% static 'js/main.js '%}"></script>
+    <!--SweetAlert2-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 {% endblock %}
 </body>
 </html>

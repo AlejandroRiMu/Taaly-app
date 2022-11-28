@@ -1,0 +1,110 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Taaly</title>
+
+    <script src="https://kit.fontawesome.com/deb2a523b5.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+
+    <link rel="stylesheet" href="{% static 'vendors/iconly/bold.css'%}">
+
+    <link rel="stylesheet" href="{% static 'vendors/perfect-scrollbar/perfect-scrollbar.css'%}">
+    <link rel="stylesheet" href="{% static 'vendors/bootstrap-icons/bootstrap-icons.css'%}">
+    <link rel="stylesheet" href="{% static 'css/app.css'%}">
+    <link rel="stylesheet" href="{% static 'css/css-customTaaly.css'%}">
+    <link rel="stylesheet" href="{% static 'css/pages/auth.css'%}">
+
+    <style>
+        body{
+            background: rgb(194,211,255);
+            background: radial-gradient(circle, rgba(194,211,255,1) 0%, rgba(211,219,255,1) 33%, rgba(255,255,255,1) 100%);
+        }
+        .bg {
+            background-image: url(/static/images/plantsImages/pexels-scott-webb-185496.jpg);
+            background-position: center center;
+        }
+        .container-bg{
+            background: rgb(255,255,255);
+            background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(204,210,239,1) 69%, rgba(255,255,255,1) 100%);
+        }
+    </style>
+
+</head>
+<body>
+{% block content %}
+    <div class="container w-75 container-bg mt-5 rounded shadow">
+        <div class="row align-items-stretch">
+            <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">
+
+            </div>
+            <div class="col bg-white p-5 rounded-end">
+                <div class="text-end">
+                    <h2><i class="fa-brands fa-pagelines pe-2"></i>Taaly</h2>
+                </div>
+                <h3 class="fw-bold text-center py-5"> Inicia Sesion</h3>
+
+                <!--Login-->
+                <form action="">
+                    <div class="mb-4">
+                        <label for="inputUsuario" class="form-label">Usuario</label><br>
+                        <input type="text" class="form-control" name="inputUsuario" id="inputUsuario" placeholder="Usuario">
+                    </div>
+                    <div class="mb-4">
+                        <label for="inputContraseña" class="form-label">Contraseña</label><br>
+                        <input type="password" class="form-control" name="inputContraseña" id="inputContraseña" placeholder="Contraseña">
+                    </div>
+                    <div class="mb-4 form-check">
+                        <input type="checkbox" name="connected" id="connected" class="form-check-input">
+                        <label for="connected" class="form-check-label">Recordarme</label>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-outline-success">Iniciar Sesion <i class="fa-solid fa-right-to-bracket ps-2"></i></button>
+                    </div>
+
+                    <div class="my-3">
+                        <span>No estas registrado? <a href="#">Registrate</a></span><br>
+                        <span><a href="">Recuperar contraseña</a></span>
+                    </div>
+                </form>
+
+                <!--Redes Sociales-->
+                <div class="container w-100 my-5">
+                    <div class="row text-center">
+                        <div class="col-12">
+                            <p>Iniciar Sesion</p>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn btn-outline-primary w-100 my-1"><i class="fa-brands fa-facebook me-2"></i>Facebook</button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-outline-danger w-100 my-1"><i class="fa-brands fa-google me-2"></i>Google</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+</body>
+{% block js %}
+    <script src="{% static 'vendors/perfect-scrollbar/perfect-scrollbar.min.js '%}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js '%}"></script>
+
+    <script src="{% static 'vendors/apexcharts/apexcharts.js '%}"></script>
+    <script src="{% static 'js/pages/dashboard.js '%}"></script>
+
+    <script src="{% static 'js/main.js '%}"></script>
+{% endblock %}
+</body>
+</html>
+

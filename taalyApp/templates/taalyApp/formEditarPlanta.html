@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+    
+{% block content %}
+<section id="basic-horizontal-layouts">
+    <div class="page-title">
+        <div class="row">
+            <div class="col-12 col-md-6 order-md-1 order-last">
+                <h3>Edicion | Plantas</h3>
+                <p class="text-subtitle text-muted">Llena el siguiente formulario</p>
+            </div>
+        </div>
+    </div>
+    <div class="row match-height d-flex justify-content-center mt-5">
+        <div class="col-md-6 col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Editar planta</h2>
+                </div>
+                <div class="card-content">
+                    <div class="card-body">
+                        <form action="/edicionPlanta/" method="POST"class="form form-horizontal"> {% csrf_token %}
+                            <input type="hidden" name="inputHiddenID" value="{{planta.id}}">
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label>Nombre</label>
+                                    </div>
+                                    <div class="col-md-8 form-group">
+                                        <input type="text" id="txtNombre" class="form-control"
+                                            name="txtNombre" value="{{planta.nombre}}" placeholder="Nombre de la planta">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Region</label>
+                                    </div>
+                                    <div class="col-md-8 form-group">
+                                        <input type="text" id="txtRegion" class="form-control"
+                                            name="txtRegion" value="{{planta.region}}" placeholder="Ingrese la region ">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Efectos</label>
+                                    </div>
+                                    <div class="col-md-8 form-group">
+                                        <input type="text" id="txtEfectos" class="form-control"
+                                            name="txtEfectos" value="{{planta.efectos}}" placeholder="Ingrese los efectos de la planta">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Usos</label>
+                                    </div>
+                                    <div class="col-md-8 form-group">
+                                        <input type="text" id="txtUsos" class="form-control"
+                                            name="txtUsos" value="{{planta.usos}}" placeholder="Ingrese los usos de la planta">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Descripcion</label>
+                                    </div>
+                                    <div class="col-md-8 form-group">
+                                        <textarea class="form-control" name="txtDescripcion" value="{{planta.descripcion}}" placeholder="Agregue una descripcion" id="txtDescripcion" style="height: 100px"></textarea>
+                                    </div>
+                                    <div class="col-sm-12 d-flex justify-content-end">
+                                        <button type="submit"
+                                            class="btn btn-primary me-1 mb-1">Editar <i class="fa-brands fa-pagelines"></i></button>
+                                        <a href="{% url 'listarPlantas' %}" class="btn btn-light-danger me-1 mb-1">Cancelar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

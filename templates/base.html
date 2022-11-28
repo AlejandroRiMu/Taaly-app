@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="{% static 'vendors/bootstrap-icons/bootstrap-icons.css'%}">
     <link rel="stylesheet" href="{% static 'css/app.css'%}">
     <link rel="stylesheet" href="{% static 'css/css-customTaaly.css'%}">
+    <link rel="stylesheet" href="{% static 'css/pages/auth.css'%}">
     <link rel="shortcut icon" href="{% static './images/favicon.svg'%}" type="image/x-icon">
     {% endblock %}
 </head>
@@ -95,9 +96,7 @@
 
     {% endblock %}
 
-</body>
-
-{% block js %}
+    {% block js %}
     <script src="{% static 'vendors/perfect-scrollbar/perfect-scrollbar.min.js '%}"></script>
     <script src="{% static 'js/bootstrap.bundle.min.js '%}"></script>
 
@@ -106,5 +105,5 @@
 
     <script src="{% static 'js/main.js '%}"></script>
 {% endblock %}
-
+</body>
 </html>

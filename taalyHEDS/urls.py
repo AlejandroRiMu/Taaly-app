@@ -27,8 +27,11 @@ urlpatterns = [
     path('catalogo/plantas', views.catalogo, name='catalogo'),
     path('catalogo/listar', views.listarPlantas, name='listarPlantas'),
     path('catalogo/eliminarPlanta/<int:id>', views.eliminarPlanta, name='eliminarPlanta'),
+    path('catalogo/editarPlanta/<int:id>', views.editarPlanta, name='editarPlanta'),
+    path('edicionPlanta/', views.edicionPlanta, name='edicionPlanta'),
     path('catalogo/formRegistrarPlanta/', views.formRegistrarPlantas, name='formRegistrarPlantas'),
     path('registrarPlanta/', views.registrarPlanta, name='registrarPlanta'),
+    path('login/', views.loginTest, name='loginTest'),
 ]
 
 

@@ -33,5 +33,40 @@ def registrarPlanta(request):
 
     return redirect('/catalogo/listar')
 
+def edicionPlanta(request):
+    id = request.POST['inputHiddenID']
+    nombre = request.POST['txtNombre']
+    region = request.POST['txtRegion']
+    efectos = request.POST['txtEfectos']
+    usos = request.POST['txtUsos']
+    descripcion = request.POST['txtDescripcion']
+
+    planta = Planta.objects.get(id = id)
+
+    planta.nombre = nombre
+    planta.region = region
+    planta.efectos = efectos
+    planta.usos = usos
+    planta.descripcion = descripcion
+    planta.save()
+
+    return redirect('/catalogo/listar')
+
+    #planta = Planta.objects.create(nombre = nombre, region = region, efectos = efectos, usos = usos, descripcion = descripcion)
+
+    return redirect('/catalogo/listar')
+
 def formRegistrarPlantas(request):
     return render(request, 'taalyApp/formRegistrarPlanta.html')
+
+def editarPlanta(request, id):
+    planta = Planta.objects.get(id = id)
+    data = {
+        'titulo': 'Editar planta',
+        'planta': planta
+    }
+
+    return render(request, 'taalyApp/formEditarPlanta.html', data)
+
+def loginTest(request):
+    return render(request, 'taalyApp/login.html')

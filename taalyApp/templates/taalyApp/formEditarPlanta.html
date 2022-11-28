@@ -12,13 +12,13 @@
     </div>
     <div class="row match-height d-flex justify-content-center mt-5">
         <div class="col-md-6 col-12">
-            <div class="card">
+            <div class="card shadow">
                 <div class="card-header">
                     <h2 class="card-title">Editar planta</h2>
                 </div>
                 <div class="card-content">
                     <div class="card-body">
-                        <form action="/edicionPlanta/" method="POST"class="form form-horizontal"> {% csrf_token %}
+                        <form action="/edicionPlanta/" method="POST" class="form form-horizontal"> {% csrf_token %}
                             <input type="hidden" name="inputHiddenID" value="{{planta.id}}">
                             <div class="form-body">
                                 <div class="row">

@@ -31,7 +31,9 @@ urlpatterns = [
     path('edicionPlanta/', views.edicionPlanta, name='edicionPlanta'),
     path('catalogo/formRegistrarPlanta/', views.formRegistrarPlantas, name='formRegistrarPlantas'),
     path('registrarPlanta/', views.registrarPlanta, name='registrarPlanta'),
-    path('login/', views.loginTest, name='loginTest'),
+    path('signin/', views.signin, name='signin'),
+    path('signup/', views.signup, name='signup'),
+    path('logout/', views.signout, name='signout'),
 ]
 
 

@@ -48,29 +48,34 @@
                 <div class="text-end">
                     <h2><i class="fa-brands fa-pagelines pe-2"></i>Taaly</h2>
                 </div>
-                <h3 class="fw-bold text-center py-5"> Inicia Sesion</h3>
+                <h3 class="fw-bold text-center py-5"> Registrate </h3>
 
-                <!--Login-->
-                <form action="">
+                <!--Register-->
+                <form action="/signup/" method="POST">
+                    {{error}}
+                    {% csrf_token %}
                     <div class="mb-4">
-                        <label for="inputUsuario" class="form-label">Usuario</label><br>
-                        <input type="text" class="form-control" name="inputUsuario" id="inputUsuario" placeholder="Usuario">
+                        <label for="username" class="form-label">Usuario</label><br>
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Usuario">
                     </div>
                     <div class="mb-4">
-                        <label for="inputContraseña" class="form-label">Contraseña</label><br>
-                        <input type="password" class="form-control" name="inputContraseña" id="inputContraseña" placeholder="Contraseña">
+                        <label for="password1" class="form-label">Contraseña</label><br>
+                        <input type="password" class="form-control" name="password1" id="password1" placeholder="Contraseña">
+                    </div>
+                    <div class="mb-4">
+                        <label for="password2" class="form-label">Confirmar contraseña</label><br>
+                        <input type="password" class="form-control" name="password2" id="password2" placeholder="Contraseña">
                     </div>
                     <div class="mb-4 form-check">
                         <input type="checkbox" name="connected" id="connected" class="form-check-input">
                         <label for="connected" class="form-check-label">Recordarme</label>
                     </div>
+                    
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-outline-success">Iniciar Sesion <i class="fa-solid fa-right-to-bracket ps-2"></i></button>
+                        <button type="submit" class="btn btn-outline-success">Registrarse <i class="fa-solid fa-right-to-bracket ps-2"></i></button>
                     </div>
-
                     <div class="my-3">
-                        <span>No estas registrado? <a href="#">Registrate</a></span><br>
-                        <span><a href="">Recuperar contraseña</a></span>
+                        <span>Ya estas registrado? <a href="{% url 'signin' %}">Inicia sesion</a></span><br>
                     </div>
                 </form>
 
@@ -78,7 +83,7 @@
                 <div class="container w-100 my-5">
                     <div class="row text-center">
                         <div class="col-12">
-                            <p>Iniciar Sesion</p>
+                            <p>Registrate</p>
                         </div>
                         <div class="row">
                             <div class="col">
@@ -107,4 +112,3 @@
 {% endblock %}
 </body>
 </html>
-

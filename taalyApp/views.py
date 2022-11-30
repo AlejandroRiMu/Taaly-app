@@ -93,9 +93,9 @@ def signup(request):
                 login(request, user)
                 return redirect('/')
             except IntegrityError:
-                return render(request, 'taalyApp/signup.html', {"form": UserCreationForm, "error": "Username already exists."})
+                return render(request, 'taalyApp/signup.html', {"form": UserCreationForm, "error": "El usuario ya existe."})
 
-        return render(request, 'taalyApp/register.html', {"form": UserCreationForm, "error": "Passwords did not match."})
+        return render(request, 'taalyApp/signup.html', {"form": UserCreationForm, "error": "Las contraseñas no coinciden."})
 
 
 def signin(request):
@@ -104,7 +104,7 @@ def signin(request):
     else:
         user = authenticate(request, username=request.POST['username'], password=request.POST['password'])
         if user is None:
-            return render(request, 'taalyApp/signin.html', {"form": AuthenticationForm, "error": "Username or password is incorrect."})
+            return render(request, 'taalyApp/signin.html', {"form": AuthenticationForm, "error": "El usuario o contraseña son incorrectos."})
 
         login(request, user)
         return redirect('/')

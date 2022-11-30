@@ -56,11 +56,11 @@
                     {% csrf_token %}
                     <div class="mb-4">
                         <label for="username" class="form-label">Usuario</label><br>
-                        <input type="text" class="form-control" name="username" id="username" placeholder="Usuario">
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Usuario" required autofocus>
                     </div>
                     <div class="mb-4">
                         <label for="password" class="form-label">Contraseña</label><br>
-                        <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña" required>
                     </div>
                     <div class="mb-4 form-check">
                         <input type="checkbox" name="connected" id="connected" class="form-check-input">
@@ -71,7 +71,7 @@
                     </div>
 
                     <div class="my-3">
-                        <span>No estas registrado? <a href="{% url 'signup' %}">Registrate</a></span><br>
+                        <span>¿No estas registrado? <a href="{% url 'signup' %}">Registrate</a></span><br>
                         <span><a href="">Recuperar contraseña</a></span>
                     </div>
                 </form>
